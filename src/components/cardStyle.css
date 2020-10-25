@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: #f7f7fa;
+}
+.container {
+  display: flex;
+  justify-content: center;
+   flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin: 0.5rem;
+  width: 20%;
+  height: auto;
+}
+
+img {
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+    width:50%;
+}
+
+/* @media screen and (max-width: 786px) {
+  .container {
+    flex-direction: column;
+  }
+} */
