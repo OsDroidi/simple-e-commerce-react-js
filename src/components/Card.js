@@ -1,6 +1,7 @@
 import React from "react";
-import { cardInfo } from "../components/data";
+import cardInfo from "../components/cardInfo";
 import "../components/cardStyle.css";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   return (
@@ -9,11 +10,13 @@ const Card = () => {
         {cardInfo.map((data, key) => {
           return (
             <div key={key} className="card">
-              <img src={data.image} alt="" />
+              <Link to={`/${data.id}`}>
+                <img src={data.image} alt="" />
+              </Link>
               <p>{data.title}</p>
-          <p>{data.priceWas}</p>
-              <p>{data.priceNow}</p>
-              <p>{`${data.priceWas - data.priceNow}`}</p>
+              <p>AED {data.priceNow}</p>
+              {/* to get the saving price */}
+              {/* <p>{`${data.priceWas - data.priceNow}`}</p> */}
             </div>
           );
         })}

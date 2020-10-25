@@ -1,5 +1,6 @@
-export const cardInfo = [
+export default [
   {
+    id: "1",
     title: "PlayStation 4 Slim 1TB Console - Jet Black",
     company: "Sony",
     priceWas: 1399.0,
@@ -7,6 +8,7 @@ export const cardInfo = [
     image: "/images/ps4.jpg",
   },
   {
+    id: "2",
     title: "Ideapad Laptop With 11.6-Inch",
     company: "Lenovo",
     priceWas: 1099.0,
@@ -14,6 +16,7 @@ export const cardInfo = [
     image: "/images/laptop.jpg",
   },
   {
+    id: "3",
     title: "55-Inch Frameless 4K UHD Smart LED TV (2020)",
     company: "Sony",
     priceWas: 1999.0,
@@ -21,6 +24,7 @@ export const cardInfo = [
     image: "/images/tv.jpg",
   },
   {
+    id: "4",
     title:
       "iPhone 11 Black 128GB 4G LTE (2020 - Slim Packing) - International Specs",
     company: "Apple",
@@ -29,6 +33,7 @@ export const cardInfo = [
     image: "/images/iphone.jpg",
   },
   {
+    id: "5",
     title: "Chromebook Laptop With 14-Inch Display",
     company: "Acer",
     priceWas: 1379.0,
@@ -36,6 +41,7 @@ export const cardInfo = [
     image: "/images/chromebook.jpg",
   },
   {
+    id: "6",
     title: "Switch Console (Extended Battery) - Neon",
     company: "Nintendo",
     priceWas: 1799.0,
@@ -43,6 +49,7 @@ export const cardInfo = [
     image: "/images/nintendo.jpg",
   },
   {
+    id: "7",
     title: "Galaxy A10s Dual SIM Red 32GB 2GB RAM 4G LTE - UAE Version",
     company: "Samsung",
     priceWas: 0,
@@ -50,6 +57,7 @@ export const cardInfo = [
     image: "/images/samsung.jpg",
   },
   {
+    id: "8",
     title: "T120TWS True Wireless In-Ear Headphone Black",
     company: "JBL",
     priceWas: 299.0,
