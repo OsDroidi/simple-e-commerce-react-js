@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import cardInfo from "../components/cardInfo";
-import "../components/cardStyle.css";
 import { Link } from "react-router-dom";
 
 class App extends Component {
@@ -29,14 +28,26 @@ class App extends Component {
       })
       .map((data) => {
         return (
-          <div key={data.id} className="card">
+          <div
+            key={data.id}
+            className="bg-white p-8 m-2 w-full sm:w-1/3  md:w-1/4  lg:w-1/5  xl:w-1/5"
+          >
             <Link to={`/${data.id}`}>
-              <img src={data.image} alt="" />
+              <img
+                className="w-auto mx-auto"
+                src={data.image}
+                alt={data.title}
+              />
             </Link>
             <p className="pb-3">{data.title}</p>
             <p className="font-bold">
               <span className="font-normal">AED</span> {data.priceNow}{" "}
-              <span className="font-normal line-through text-xs">
+              <span
+                className="font-normal line-through text-xs"
+                style={{
+                  display: data.priceWas !== 0 ? "inline" : "none",
+                }}
+              >
                 {data.priceWas}
               </span>{" "}
             </p>

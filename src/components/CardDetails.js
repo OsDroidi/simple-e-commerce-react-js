@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import cardInfo from "../components/cardInfo";
-import "../components/cardStyle.css";
+
 
 const CardDetails = () => {
   const { productId } = useParams();
@@ -37,7 +37,9 @@ const CardDetails = () => {
             </span>
           </div>
 
-          <div>
+          <div
+            style={{ display: thisProduct.priceWas !== 0 ? "inline" : "none" }}
+          >
             <span className="text-gray-600 pr-5 pb-5 pt-5 ">Saving: </span>{" "}
             <span className="font-bold text-sm">
               {`AED ${thisProduct.priceWas - thisProduct.priceNow}`}{" "}
