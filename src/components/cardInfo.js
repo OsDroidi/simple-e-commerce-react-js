@@ -1,10 +1,12 @@
-export default [
+export const cardInfo = [
   {
     id: "1",
     title: "PlayStation 4 Slim 1TB Console - Jet Black",
     company: "Sony",
     priceWas: 1399.0,
     priceNow: 989.0,
+    reviews: 12338,
+    rate: 4.3,
     image: "/images/ps4.jpg",
   },
   {
@@ -13,6 +15,8 @@ export default [
     company: "Lenovo",
     priceWas: 1099.0,
     priceNow: 999.0,
+    reviews: 250,
+    rate: 2.5,
     image: "/images/laptop.jpg",
   },
   {
@@ -21,6 +25,8 @@ export default [
     company: "Sony",
     priceWas: 1999.0,
     priceNow: 1328.95,
+    reviews: 142,
+    rate: 5,
     image: "/images/tv.jpg",
   },
   {
@@ -30,6 +36,8 @@ export default [
     company: "Apple",
     priceWas: 0,
     priceNow: 2699.0,
+    reviews: 525,
+    rate: 3.2,
     image: "/images/iphone.jpg",
   },
   {
@@ -38,6 +46,8 @@ export default [
     company: "Acer",
     priceWas: 1379.0,
     priceNow: 1175.0,
+    reviews: 1487,
+    rate: 4.1,
     image: "/images/chromebook.jpg",
   },
   {
@@ -46,6 +56,8 @@ export default [
     company: "Nintendo",
     priceWas: 1799.0,
     priceNow: 1177.8,
+    reviews: 4254,
+    rate: 3.8,
     image: "/images/nintendo.jpg",
   },
   {
@@ -54,6 +66,8 @@ export default [
     company: "Samsung",
     priceWas: 0,
     priceNow: 411.35,
+    reviews: 4552,
+    rate: 3.9,
     image: "/images/samsung.jpg",
   },
   {
@@ -62,6 +76,8 @@ export default [
     company: "JBL",
     priceWas: 299.0,
     priceNow: 158.8,
+    reviews: 545445,
+    rate: 5,
     image: "/images/jbl.jpg",
   },
 ];
