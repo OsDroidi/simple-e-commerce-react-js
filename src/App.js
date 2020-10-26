@@ -5,7 +5,7 @@ import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <div className="container mx-auto">
       <Switch>
         <Route exact path="/">
           <Card />
@@ -14,7 +14,7 @@ function App() {
           <CardDetails />
         </Route>
       </Switch>
-    </>
+    </div>
   );
 }
 

@@ -7,12 +7,13 @@
 html {
   background-color: #f7f7fa;
 }
-.container {
+
+/* .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 25px;
-}
+} */
 
 .card {
   background-color: #ffffff;
@@ -34,10 +35,6 @@ img {
   padding: 25px;
 }
 
-span {
-  font-size: 1rem;
-  color: gray;
-}
 
 button {
   background-color: #ffffff;
@@ -46,14 +43,15 @@ button {
   cursor: pointer;
 }
 
-p {
+/* p {
   padding: 5px;
-}
+} */
 
 @media screen and (max-width: 786px) {
-  .container {
+
+  /* .container {
     flex-direction: column;
-  }
+  } */
   .card {
     width: 100%;
   }
