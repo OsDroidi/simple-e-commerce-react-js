@@ -9,7 +9,7 @@ const CardDetails = () => {
   return (
     <>
       <Link to={`/`}>
-        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 m-5 border border-gray-400 focus:outline-none ">
+        <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 m-5 border border-gray-400 focus:outline-none ">
           Back
         </button>
       </Link>
@@ -31,22 +31,30 @@ const CardDetails = () => {
             <li className="inline-block text-gray-600">{`(${thisProduct.reviews} reviews)`}</li>
           </ul>
 
-          <div className="pb-1 pt-1" style={{
-                  display: thisProduct.priceWas !== 0 ? "inline" : "none",
-                }}>
-            <span className="text-gray-600 pr-5 ">Was: </span>
-            <span className="line-through text-sm">
+          <div
+            className="pb-1 pt-1"
+            style={{
+              display: thisProduct.priceWas !== 0 ? "inline" : "none",
+            }}
+          >
+            <span className="text-gray-600 pr-5 text-xs">Was: </span>
+            <span className="line-through text-sm text-gray-500">
               AED {thisProduct.priceWas}
             </span>
           </div>
-          <div className="pb-2">
-            <span className="text-gray-600 pr-5 pb-5 pt-5" style={{
-              display: thisProduct.priceWas !== 0 ? "block-inline" : "none",
-            }}>Now: </span>
+          <div className="pb-2 pt-2">
+            <span
+              className="text-gray-600 pr-5 pb-5 pt-5 text-xs"
+              style={{
+                display: thisProduct.priceWas !== 0 ? "block-inline" : "none",
+              }}
+            >
+              Now:{" "}
+            </span>
             <span className="text-xl font-bold">
               AED {thisProduct.priceNow}{" "}
             </span>
-            <span className="text-gray-600 pr-5 pb-5 pt-5">
+            <span className="text-gray-500 pr-5 pb-5 pt-5 text-xs align-text-top">
               (Inclusive of VAT)
             </span>
           </div>
@@ -56,7 +64,9 @@ const CardDetails = () => {
               display: thisProduct.priceWas !== 0 ? "block-inline" : "none",
             }}
           >
-            <span className="text-gray-600 pr-5 pb-5 pt-5 ">Saving: </span>{" "}
+            <span className="text-gray-600 pr-5 pb-5 pt-5 text-xs">
+              Saving:{" "}
+            </span>{" "}
             <span className="font-bold text-sm">
               {`AED ${thisProduct.priceWas - thisProduct.priceNow}`}{" "}
             </span>
@@ -68,7 +78,7 @@ const CardDetails = () => {
               <option>2</option>
               <option>3</option>
             </select>
-            <button class="w-56  bg-blue-500 hover:bg-blue-400 text-white font-bold  block-inline   border border-blue-500 py-3 px-4 pr-8  focus:outline-none ">
+            <button className="w-56  bg-blue-500 hover:bg-blue-400 text-white font-bold  block-inline   border border-blue-500 py-3 px-4 pr-8  focus:outline-none ">
               Add to Cart
             </button>
           </div>

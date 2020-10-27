@@ -35,7 +35,7 @@ class App extends Component {
         return (
           <div
             key={data.id}
-            className="bg-white p-3 m-4 w-full sm:w-1/3  md:w-1/4  lg:w-1/5  xl:w-1/5 transition duration-200 ease-in-out hover:shadow-lg"
+            className="bg-white p-2 m-3 w-1/3 sm:w-1/3  md:w-1/4  lg:w-1/5  xl:w-1/5 transition duration-200 ease-in-out hover:shadow-lg"
           >
             <Link to={`/${data.id}`}>
               <img
@@ -46,14 +46,15 @@ class App extends Component {
             </Link>
             <p className="pb-3">{data.title}</p>
             <p className="font-bold">
-              <span className="font-normal">AED</span> {data.priceNow}{" "}
+              <span className="font-normal text-gray-600">AED</span>{" "}
+              {data.priceNow}{" "}
               <span
-                className="font-normal line-through text-xs"
+                className="font-normal line-through text-xs text-gray-500 ml-1 mb-5"
                 style={{
                   display: data.priceWas !== 0 ? "inline" : "none",
                 }}
               >
-                {data.priceWas}
+                {`AED ${data.priceWas}`}
               </span>{" "}
             </p>
             {/* to get the saving price */}
@@ -66,7 +67,7 @@ class App extends Component {
       <>
         <div className="flex shadow m-10">
           <input
-            className="w-full  p-3 focus:outline-none "
+            className="w-full  p-3 px-8 focus:outline-none "
             type="text"
             placeholder="What are you looking for?"
             onChange={(e) => this.searchSpace(e)}
