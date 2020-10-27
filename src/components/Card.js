@@ -35,7 +35,7 @@ class App extends Component {
         return (
           <div
             key={data.id}
-            className="bg-white p-3 m-2 w-full sm:w-1/3  md:w-1/4  lg:w-1/5  xl:w-1/5"
+            className="bg-white p-3 m-4 w-full sm:w-1/3  md:w-1/4  lg:w-1/5  xl:w-1/5 transition duration-200 ease-in-out hover:shadow-lg"
           >
             <Link to={`/${data.id}`}>
               <img
@@ -81,7 +81,7 @@ class App extends Component {
           </button>
         </div>
 
-        <div className="flex flex-wrap justify-center">{items}</div>
+        <div className="flex flex-wrap justify-center pb-5">{items}</div>
       </>
     );
   }
