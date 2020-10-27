@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { cardInfo } from "../components/cardInfo";
+import { IoIosArrowBack } from "react-icons/io";
 
 const CardDetails = () => {
   const { productId } = useParams();
@@ -9,8 +10,8 @@ const CardDetails = () => {
   return (
     <>
       <Link to={`/`}>
-        <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 m-5 border border-gray-400 focus:outline-none ">
-          Back
+        <button className=" bg-white text-center hover:bg-gray-100 text-gray-800 font-semibold py-4 px-4 m-10 border border-gray-400 focus:outline-none text-xl">
+          <IoIosArrowBack />
         </button>
       </Link>
       <div className="flex flex-wrap justify-center">
@@ -18,7 +19,7 @@ const CardDetails = () => {
           <img
             src={thisProduct.image}
             alt={thisProduct.title}
-            className="p-10 bg-white"
+            className="p-10 bg-white border border-gray-200"
           />
         </div>
         <div className="p-10 m-5">
@@ -37,14 +38,14 @@ const CardDetails = () => {
               display: thisProduct.priceWas !== 0 ? "inline" : "none",
             }}
           >
-            <span className="text-gray-600 pr-5 text-xs">Was: </span>
+            <span className="text-gray-500 pr-5 text-xs">Was: </span>
             <span className="line-through text-sm text-gray-500">
               AED {thisProduct.priceWas}
             </span>
           </div>
           <div className="pb-2 pt-2">
             <span
-              className="text-gray-600 pr-5 pb-5 pt-5 text-xs"
+              className="text-gray-500 pr-5 pb-5 pt-5 text-xs"
               style={{
                 display: thisProduct.priceWas !== 0 ? "block-inline" : "none",
               }}
@@ -64,7 +65,7 @@ const CardDetails = () => {
               display: thisProduct.priceWas !== 0 ? "block-inline" : "none",
             }}
           >
-            <span className="text-gray-600 pr-5 pb-5 pt-5 text-xs">
+            <span className="text-gray-500 pr-5 pb-5 pt-5 text-xs">
               Saving:{" "}
             </span>{" "}
             <span className="font-bold text-sm">
