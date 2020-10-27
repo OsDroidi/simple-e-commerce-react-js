@@ -31,7 +31,9 @@ const CardDetails = () => {
             <li className="inline-block text-gray-600">{`(${thisProduct.reviews} reviews)`}</li>
           </ul>
 
-          <div className="pb-1 pt-1">
+          <div className="pb-1 pt-1" style={{
+                  display: thisProduct.priceWas !== 0 ? "inline" : "none",
+                }}>
             <span className="text-gray-600 pr-5 ">Was: </span>
             <span className="line-through text-sm">
               AED {thisProduct.priceWas}
@@ -59,7 +61,7 @@ const CardDetails = () => {
           </div>
           <div className="pt-8">
             <p className="text-gray-500 pb-2">Quantity</p>
-            <select className=" block-inline appearance-none  border border-gray-500 text-gray-800 py-3 px-4 pr-8 mr-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+            <select className=" block-inline  border border-gray-500 text-gray-800 py-3 px-2  mr-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
               <option>1</option>
               <option>2</option>
               <option>3</option>
