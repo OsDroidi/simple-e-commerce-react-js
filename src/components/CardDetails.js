@@ -40,7 +40,9 @@ const CardDetails = () => {
             </span>
           </div>
           <div className="pb-2">
-            <span className="text-gray-600 pr-5 pb-5 pt-5">Now: </span>
+            <span className="text-gray-600 pr-5 pb-5 pt-5" style={{
+              display: thisProduct.priceWas !== 0 ? "block-inline" : "none",
+            }}>Now: </span>
             <span className="text-xl font-bold">
               AED {thisProduct.priceNow}{" "}
             </span>
@@ -61,12 +63,12 @@ const CardDetails = () => {
           </div>
           <div className="pt-8">
             <p className="text-gray-500 pb-2">Quantity</p>
-            <select className=" block-inline  border border-gray-500 text-gray-800 py-3 px-2  mr-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+            <select className=" block-inline  border border-gray-500 text-gray-800 py-3 px-4  mr-2 mb-2 focus:outline-none focus:bg-white focus:border-gray-500">
               <option>1</option>
               <option>2</option>
               <option>3</option>
             </select>
-            <button class="w-9/12  bg-blue-500 hover:bg-blue-400 text-white font-bold  block-inline appearance-none  border border-blue-500 py-3 px-4 pr-8 leading-tight focus:outline-none ">
+            <button class="w-56  bg-blue-500 hover:bg-blue-400 text-white font-bold  block-inline   border border-blue-500 py-3 px-4 pr-8  focus:outline-none ">
               Add to Cart
             </button>
           </div>

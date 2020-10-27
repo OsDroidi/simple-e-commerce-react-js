@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { cardInfo } from "../components/cardInfo";
 import { Link } from "react-router-dom";
+import { MdSearch } from "react-icons/md";
 
 class App extends Component {
   constructor() {
@@ -9,6 +10,10 @@ class App extends Component {
     this.state = {
       search: null,
     };
+  }
+
+  componentDidMount() {
+    this.nameInput.focus();
   }
 
   searchSpace = (event) => {
@@ -59,13 +64,21 @@ class App extends Component {
 
     return (
       <>
-        <div className="flex p-10 ">
+        <div className="flex shadow m-10">
           <input
-            className="w-full shadow rounded p-5 focus:outline-none "
+            className="w-full  p-3 focus:outline-none "
             type="text"
-            placeholder="Enter item to be searched"
+            placeholder="What are you looking for?"
             onChange={(e) => this.searchSpace(e)}
+            ref={(input) => {
+              this.nameInput = input;
+            }}
           />
+          <button className="bg-white w-auto flex justify-end items-center focus:outline-none text-2xl p-4 hover:text-gray-400">
+            <i className="material-icons">
+              <MdSearch />
+            </i>
+          </button>
         </div>
 
         <div className="flex flex-wrap justify-center">{items}</div>
