@@ -13,7 +13,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.nameInput.focus();
+    // I need to disable it on the mobile screens
+    // this.nameInput.focus();
   }
 
   searchSpace = (event) => {
@@ -35,7 +36,7 @@ class App extends Component {
         return (
           <div
             key={data.id}
-            className="bg-white p-2 m-3 w-1/3 sm:w-1/3  md:w-1/4  lg:w-1/5  xl:w-1/5 transition duration-200 ease-in-out hover:shadow-lg"
+            className="bg-white p-3 m-4 w-1/3 sm:w-1/3  md:w-1/4  lg:w-1/5  xl:w-1/6 transition duration-200 ease-in-out shadow-sm hover:shadow-lg"
           >
             <Link to={`/${data.id}`}>
               <img
@@ -44,7 +45,9 @@ class App extends Component {
                 alt={data.title}
               />
             </Link>
-            <p className="pb-3">{data.title}</p>
+            <p className="pb-3 text-sm sm:text-base md:text-base lg:text-base xl:text-base">
+              {data.title}
+            </p>
             <p className="font-bold">
               <span className="font-normal text-gray-600">AED</span>{" "}
               {data.priceNow}{" "}
@@ -71,9 +74,9 @@ class App extends Component {
             type="text"
             placeholder="What are you looking for?"
             onChange={(e) => this.searchSpace(e)}
-            ref={(input) => {
-              this.nameInput = input;
-            }}
+            // ref={(input) => {
+            //   this.nameInput = input;
+            // }}
           />
           <button className="bg-white w-auto flex justify-end items-center focus:outline-none text-2xl p-4 hover:text-gray-400">
             <i className="material-icons">
