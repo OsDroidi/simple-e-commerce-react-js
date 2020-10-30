@@ -17,7 +17,7 @@ export class DataProvider extends Component {
         description: "This is short description",
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut dui venenatis mauris ullamcorper sollicitudin. Praesent sit amet pretium tellus. Praesent sit amet imperdiet ante, et vulputate dui.",
-        
+
         count: 1,
       },
       {
@@ -32,7 +32,7 @@ export class DataProvider extends Component {
         description: "This is short description",
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut dui venenatis mauris ullamcorper sollicitudin. Praesent sit amet pretium tellus. Praesent sit amet imperdiet ante, et vulputate dui.",
-        
+
         count: 1,
       },
       {
@@ -47,7 +47,7 @@ export class DataProvider extends Component {
         description: "This is short description",
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut dui venenatis mauris ullamcorper sollicitudin. Praesent sit amet pretium tellus. Praesent sit amet imperdiet ante, et vulputate dui.",
-        
+
         count: 1,
       },
       {
@@ -63,7 +63,7 @@ export class DataProvider extends Component {
         description: "This is short description",
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut dui venenatis mauris ullamcorper sollicitudin. Praesent sit amet pretium tellus. Praesent sit amet imperdiet ante, et vulputate dui.",
-        
+
         count: 1,
       },
       {
@@ -78,7 +78,7 @@ export class DataProvider extends Component {
         description: "This is short description",
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut dui venenatis mauris ullamcorper sollicitudin. Praesent sit amet pretium tellus. Praesent sit amet imperdiet ante, et vulputate dui.",
-        
+
         count: 1,
       },
       {
@@ -93,7 +93,7 @@ export class DataProvider extends Component {
         description: "This is short description",
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut dui venenatis mauris ullamcorper sollicitudin. Praesent sit amet pretium tellus. Praesent sit amet imperdiet ante, et vulputate dui.",
-        
+
         count: 1,
       },
       {
@@ -108,7 +108,7 @@ export class DataProvider extends Component {
         description: "This is short description",
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut dui venenatis mauris ullamcorper sollicitudin. Praesent sit amet pretium tellus. Praesent sit amet imperdiet ante, et vulputate dui.",
-        
+
         count: 1,
       },
       {
@@ -123,7 +123,37 @@ export class DataProvider extends Component {
         description: "This is short description",
         content:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut dui venenatis mauris ullamcorper sollicitudin. Praesent sit amet pretium tellus. Praesent sit amet imperdiet ante, et vulputate dui.",
-        
+
+        count: 1,
+      },
+      {
+        _id: "9",
+        title: "iPhone 12 128GB Black 5G - Middle East Version",
+        company: "Apple",
+        priceWas: 0,
+        price: 3609,
+        reviews: 3225,
+        rate: 4.5,
+        src: "/images/iphone12.jpg",
+        description: "This is short description",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut dui venenatis mauris ullamcorper sollicitudin. Praesent sit amet pretium tellus. Praesent sit amet imperdiet ante, et vulputate dui.",
+
+        count: 1,
+      },
+      {
+        _id: "10",
+        title: "AirPods Pro Wireless Earphones White",
+        company: "Apple",
+        priceWas: 999,
+        price: 750,
+        reviews: 12445,
+        rate: 4.8,
+        src: "/images/air.jpg",
+        description: "This is short description",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut dui venenatis mauris ullamcorper sollicitudin. Praesent sit amet pretium tellus. Praesent sit amet imperdiet ante, et vulputate dui.",
+
         count: 1,
       },
     ],
@@ -142,11 +172,11 @@ export class DataProvider extends Component {
       });
       this.setState({ cart: [...cart, ...data] });
     } else {
-       cart.forEach((item) => {
-      if (item._id === id) {
-        item.count += 1;
-      }
-    });
+      cart.forEach((item) => {
+        if (item._id === id) {
+          item.count += 1;
+        }
+      });
     }
   };
 
