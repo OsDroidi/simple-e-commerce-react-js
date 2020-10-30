@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { cardInfo } from "../components/cardInfo";
 import { Link } from "react-router-dom";
+import { DataContext } from "../Context";
 import { MdSearch } from "react-icons/md";
 
-class App extends Component {
+export class Products extends Component {
+  static contextType = DataContext;
+
   constructor() {
     super();
 
@@ -12,56 +14,51 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    // I need to disable it on the mobile screens
-    // this.nameInput.focus();
-  }
-
   searchSpace = (event) => {
     let keyword = event.target.value;
     this.setState({ search: keyword });
   };
 
   render() {
-    const items = cardInfo
-      .filter((data) => {
-        if (this.state.search == null) return data;
+    const { products } = this.context;
+
+    const items = products
+      .filter((product) => {
+        if (this.state.search == null) return product;
         else if (
-          data.title.toLowerCase().includes(this.state.search.toLowerCase())
+          product.title.toLowerCase().includes(this.state.search.toLowerCase())
         ) {
-          return data;
+          return product;
         }
       })
-      .map((data) => {
+      .map((product) => {
         return (
           <div
-            key={data.id}
+            key={product._id}
             className="bg-white p-3 m-4 w-1/3 sm:w-1/3  md:w-1/4  lg:w-1/5  xl:w-1/6 transition duration-200 ease-in-out shadow-sm hover:shadow-lg"
           >
-            <Link to={`/${data.id}`}>
+            <Link to={`/product/${product._id}`}>
               <img
                 className="w-auto mx-auto"
-                src={data.image}
-                alt={data.title}
+                src={product.src}
+                alt={product.title}
               />
             </Link>
             <p className="pb-3 text-sm sm:text-base md:text-base lg:text-base xl:text-base">
-              {data.title}
+              {product.title}
             </p>
             <p className="font-bold">
               <span className="font-normal text-gray-600">AED</span>{" "}
-              {data.priceNow}{" "}
+              {product.price}{" "}
               <span
                 className="font-normal line-through text-xs text-gray-500 ml-1 mb-5"
                 style={{
-                  display: data.priceWas !== 0 ? "inline" : "none",
+                  display: product.priceWas !== 0 ? "inline" : "none",
                 }}
               >
-                {`AED ${data.priceWas}`}
+                {`AED ${product.priceWas}`}
               </span>{" "}
             </p>
-            {/* to get the saving price */}
-            {/* <p>{`${data.priceWas - data.priceNow}`}</p> */}
           </div>
         );
       });
@@ -74,14 +71,9 @@ class App extends Component {
             type="text"
             placeholder="What are you looking for?"
             onChange={(e) => this.searchSpace(e)}
-            // ref={(input) => {
-            //   this.nameInput = input;
-            // }}
           />
           <button className="bg-white w-auto flex justify-end items-center focus:outline-none text-2xl p-4 hover:text-gray-400">
-            <i className="material-icons">
-              <MdSearch />
-            </i>
+            <MdSearch />
           </button>
         </div>
 
@@ -91,4 +83,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Products;

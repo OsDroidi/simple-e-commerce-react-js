@@ -1,21 +1,22 @@
 import React from "react";
-import Card from "./components/Card";
-import CardDetails from "./components/CardDetails";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import Header from "./components/Header";
+import Section from "./components/Section";
+import { DataProvider } from "./components/Context";
 
-function App() {
-  return (
-    <div className="container mx-auto">
-      <Switch>
-        <Route exact path="/">
-          <Card />
-        </Route>
-        <Route path="/:productId">
-          <CardDetails />
-        </Route>
-      </Switch>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <DataProvider>
+        <div className="container mx-auto">
+          <Router>
+            <Header />
+            <Section />
+          </Router>
+        </div>
+      </DataProvider>
+    );
+  }
 }
 
 export default App;
