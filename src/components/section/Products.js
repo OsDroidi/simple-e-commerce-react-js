@@ -23,6 +23,7 @@ export class Products extends Component {
     const { products } = this.context;
 
     const items = products
+      // eslint-disable-next-line array-callback-return
       .filter((product) => {
         if (this.state.search == null) return product;
         else if (

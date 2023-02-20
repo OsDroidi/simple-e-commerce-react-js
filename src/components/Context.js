@@ -203,6 +203,7 @@ export class DataProvider extends Component {
   };
 
   removeProduct = (id) => {
+    // eslint-disable-next-line no-lone-blocks
     {
       const { cart } = this.state;
       cart.forEach((item, index) => {
