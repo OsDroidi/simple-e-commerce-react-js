@@ -114,7 +114,7 @@ export class DataProvider extends Component {
       {
         _id: "8",
         title: "T120TWS True Wireless In-Ear Headphone Black",
-        company: "JBL",
+        company: "JBL Company",
         priceWas: 299,
         price: 158,
         reviews: 545445,
