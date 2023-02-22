@@ -61,7 +61,7 @@ export class Details extends Component {
                 >
                   <span className="text-gray-500 pr-5 text-xs">Was: </span>
                   <span className="line-through text-sm text-gray-500">
-                    AED {item.priceWas}
+                    SAR {item.priceWas}
                   </span>
                 </div>
                 <div className="pb-2 pt-2">
@@ -73,7 +73,7 @@ export class Details extends Component {
                   >
                     Now:{" "}
                   </span>
-                  <span className="text-xl font-bold">AED {item.price} </span>
+                  <span className="text-xl font-bold">SAR {item.price} </span>
                   <span className="text-gray-500 pr-5 pb-5 pt-5 text-xs align-text-top">
                     (Inclusive of VAT)
                   </span>
@@ -88,7 +88,7 @@ export class Details extends Component {
                     Saving:{" "}
                   </span>{" "}
                   <span className="font-bold text-sm">
-                    {`AED ${item.priceWas - item.price}`}{" "}
+                    {`SAR ${item.priceWas - item.price}`}{" "}
                   </span>
                 </div>
                 <div className="pt-8">
