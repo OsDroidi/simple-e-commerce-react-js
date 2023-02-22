@@ -40,7 +40,7 @@ export class Cart extends Component {
                 <div className=" m-5">
                   <p className="text-gray-600 pb-1">{item.company}</p>
                   <h5 className="text-xl font-bold pb-3">{item.title}</h5>
-                  <p>SAR {item.price} </p>
+                  <p>AED {item.price} </p>
 
                   <div class="custom-number-input h-auto w-32 pt-10">
                     <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
@@ -75,7 +75,7 @@ export class Cart extends Component {
             </div>
           ))}
           <div className="text-center text-xl pb-10 font-bold">
-            <h3>Total: SAR {total}</h3>
+            <h3>Total: AED {total}</h3>
           </div>
         </div>
       );

@@ -49,7 +49,7 @@ export class Products extends Component {
               {product.title}
             </p>
             <p className="font-bold">
-              <span className="font-normal text-gray-600">SAR</span>{" "}
+              <span className="font-normal text-gray-600">AED</span>{" "}
               {product.price}{" "}
               <span
                 className="font-normal line-through text-xs text-gray-500 ml-1 mb-5"
@@ -57,7 +57,7 @@ export class Products extends Component {
                   display: product.priceWas !== 0 ? "inline" : "none",
                 }}
               >
-                {`SAR ${product.priceWas}`}
+                {`AED ${product.priceWas}`}
               </span>{" "}
             </p>
           </div>
