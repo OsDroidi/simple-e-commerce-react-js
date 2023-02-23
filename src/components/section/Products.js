@@ -77,8 +77,14 @@ export class Products extends Component {
             <MdSearch />
           </button>
         </div>
-
         <div className="flex flex-wrap justify-center pb-5">{items}</div>
+        <div className="flex justify-center items-center pb-5">
+          <small>
+            <a target="_blank" rel="noreferrer" href="https://osdroidi.com/">
+              Made by Osama Mehifoodh
+            </a>
+          </small>
+        </div>
       </>
     );
   }
