@@ -1,40 +1,37 @@
-import React, { Component } from "react";
+import React, { Component, useContext, useEffect, useState } from "react";
 import { DataContext } from "../Context";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 
-export class Details extends Component {
-  static contextType = DataContext;
-  state = {
-    product: [],
-  };
+export function Details() {
+  const context = useContext(DataContext);
+  const [product, setProduct] = useState([]);
 
-  getProduct = () => {
-    if (this.props.match.params.id) {
-      const res = this.context.products;
-      const data = res.filter((item) => {
-        return item._id === this.props.match.params.id;
-      });
-      this.setState({ product: data });
-    }
-  };
+  const { id } = useParams();
 
-  componentDidMount() {
-    this.getProduct();
-  }
+  useEffect(() => {
+    const getProduct = () => {
+      if (id) {
+        const res = context.products;
+        const data = res.filter((item) => item._id === id);
+        setProduct(data);
+      }
+    };
 
-  render() {
-    const { product } = this.state;
-    const { addCart } = this.context;
-    return (
-      <>
-        {product.map((item) => (
-          <div key={item._id}>
-            <Link to={`/`}>
-              <button className=" bg-white text-center hover:bg-gray-100 text-gray-800 font-semibold py-4 px-4 m-10 border border-gray-400 focus:outline-none text-xl">
-                <IoIosArrowBack />
-              </button>
-            </Link>
+    getProduct();
+  }, [context.products, id]);
+
+  const { addCart } = context;
+
+  return (
+    <>
+      {product.map((item) => (
+        <div key={item._id}>
+          <Link to={`/`}>
+            <button className="bg-white text-center hover:bg-gray-100 text-gray-800 font-semibold py-4 px-4 m-10 border border-gray-400 focus:outline-none text-xl">
+              <IoIosArrowBack />
+            </button>
+          </Link>
             <div className="flex flex-wrap justify-center">
               <div>
                 <img
@@ -100,11 +97,10 @@ export class Details extends Component {
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </>
-    );
-  }
+        </div>
+      ))}
+    </>
+  );
 }
 
 export default Details;

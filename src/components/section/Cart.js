@@ -32,7 +32,10 @@ export class Cart extends Component {
             </button>
           </Link>
           {cart.map((item) => (
-            <div className=" bg-white justify-center m-5 mx-0  sm:mx-0 md:mx-0 lg:mx-0 xl:mx-40  border">
+            <div
+              key={item._id}
+              className=" bg-white justify-center m-5 mx-0  sm:mx-0 md:mx-0 lg:mx-0 xl:mx-40  border"
+            >
               <div className="flex flex-wrap">
                 <div>
                   <img src={item.src} alt={item.title} className="" />
@@ -42,24 +45,24 @@ export class Cart extends Component {
                   <h5 className="text-xl font-bold pb-3">{item.title}</h5>
                   <p>SAR {item.price} </p>
 
-                  <div class="custom-number-input h-auto w-32 pt-10">
-                    <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                  <div className="custom-number-input h-auto w-32 pt-10">
+                    <div className="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
                       <button
                         data-action="decrement"
-                        class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-l cursor-pointer outline-none focus:outline-none"
+                        className=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-l cursor-pointer outline-none focus:outline-none"
                         onClick={() => reduction(item._id)}
                       >
-                        <span class="m-auto text-2xl font-thin">−</span>
+                        <span className="m-auto text-2xl font-thin">−</span>
                       </button>
-                      <p class="appearance-none m-0 outline-none focus:outline-none text-center w-auto bg-gray-300 font-semibold text-md hover:text-black focus:text-black  flex items-center text-gray-700">
+                      <p className="appearance-none m-0 outline-none focus:outline-none text-center w-auto bg-gray-300 font-semibold text-md hover:text-black focus:text-black  flex items-center text-gray-700">
                         {item.count}
                       </p>
                       <button
                         data-action="increment"
-                        class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer focus:outline-none"
+                        className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer focus:outline-none"
                         onClick={() => increase(item._id)}
                       >
-                        <span class="m-auto text-2xl font-thin">+</span>
+                        <span className="m-auto text-2xl font-thin">+</span>
                       </button>
                     </div>
 

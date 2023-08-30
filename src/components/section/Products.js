@@ -36,7 +36,7 @@ export class Products extends Component {
         return (
           <div
             key={product._id}
-            className="bg-white p-3 m-4 w-1/3 sm:w-1/3  md:w-1/4  lg:w-1/5  xl:w-1/6 transition duration-200 ease-in-out shadow-sm hover:shadow-lg"
+            className="bg-white p-3 m-4 w-1/3 sm:w-1/3  md:w-1/4  lg:w-1/5  xl:w-1/6 transition duration-200 ease-in-out shadow-md hover:shadow-lg"
           >
             <Link to={`/product/${product._id}`}>
               <img
